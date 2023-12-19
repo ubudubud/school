@@ -13,7 +13,7 @@ body {
     width: 100%;
     margin-bottom: 10px;
     position: static-top;
-    /* background-color: #ffffff; */
+    /* background-color: #fa0; */
     /* margin-top: 0px; */
 }
 
@@ -23,7 +23,9 @@ body {
     padding: 18px 24px 10px;
     margin: auto;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: rgba(255, 255, 255, 0.85);
+    align-content: space-around;
+    /* background-color: aqua; */
 }
 
 .main_header .container .logo {
@@ -45,7 +47,6 @@ body {
 .main_header .container .nav_list li {
     padding: 0px 24px;
     margin-left: 16px;
-
 }
 
 .main_header .container .nav_list li a {
@@ -60,7 +61,7 @@ body {
 }
 
 .main_header .container .nav_list a:hover {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.85);
     transform: scale(1.5);
 }
 
@@ -1584,10 +1585,9 @@ img {
         margin: auto;
     }
     .copyright {
-        margin: auto;
+        margin: 20px auto;
         width: 50%;
         align-items: center;
-        /* background-color: #f00; */
     }
 }
 
