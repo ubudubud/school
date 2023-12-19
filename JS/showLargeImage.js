@@ -1,5 +1,5 @@
 function showLarge(e){
-    let small = e.target; //e.target記錄觸發此事件的物 件
+    let small = e.target;
 
     document.getElementById("large").src = small.src;
 }

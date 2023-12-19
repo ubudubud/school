@@ -38,6 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // 自动轮播
-    setInterval(nextSlide, 3000); // 切换间隔时间，单位：毫秒
+
+    setInterval(nextSlide, 3000); 
 });

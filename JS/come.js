@@ -1,4 +1,3 @@
-// 在 your-script.js 文件中添加以下代码
 $(document).ready(function () {
     $(window).scroll(function () {
         $(".card-item").each(function () {
