@@ -243,31 +243,80 @@ body {
     
 }
 
-
-
-
-
-
-.index_banner {
+/* .index_banner {
     width: 100%;
-    /* height: 700px; */
-    /* background-color: aquamarine; */
 }
-
 .index_banner img {
     width: 100%;
     height: 400px;
     display: block;
-    /* vertical-align: auto; */
     object-fit: cover;
 }
-
 .index_banner .box {
     display: block;
-    position: absolute;
-    
+    position: absolute;    
     width: 100%;
+} */
+.index_banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* max-width: 800px; 根据你的设计设置宽度 */
+    margin: auto;
 }
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
+}
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 
 .index_product_head {
     width: 100%;
@@ -290,6 +339,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     /* background-color: aqua; */
+    font-family:"Saira Extra Condensed", sans-serif;
 }
 .card-item {
     box-sizing: border-box;
@@ -301,9 +351,23 @@ body {
     /* background-color: bisque; */
     margin-bottom: 40px;
 }
+
 .card-item a {
     text-decoration: none;
 }
+
+.card-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 5s ease;
+}
+
+.card-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .card-item a img {
     width: 100%;
     vertical-align: middle;
@@ -321,6 +385,14 @@ body {
     font-size: 24px;
     font-weight: 600;
 }
+.card-info:hover {
+    transition: 0.4s;
+    transform: scale(1.1);
+    /* background-color: #141414; */
+    border: solid 2px black;
+}
+
+
 @media screen and (max-width:1023px) {
     .card-item {
         width: 50%;
@@ -377,6 +449,7 @@ body {
     justify-content: center;
     gap: 20px;
     padding: 20px 0 80px;
+    font-family: "Saira Extra Condensed", sans-serif;
 }
 .product-page-list a {
     text-decoration: none;
@@ -434,6 +507,31 @@ body {
     color: #ffffff;
 }
 
+.index-nature {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 5s ease;
+}
+
+.index-nature.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.yt-list {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 5s ease;
+}
+
+.yt-list.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
 .yt {
     background-color: #f2f1ec;
     width: 100%;
@@ -462,6 +560,8 @@ body {
     flex-direction: column;
     margin-left: 120px;
     line-height: 1.5;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 600;
 }
 .yt .yt-list .yt-info h1 {
     font-size: 30px;
@@ -478,7 +578,7 @@ body {
     text-decoration: none;
     color: #000;
     background-color: #ffffff;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     border-radius: 3px;
     transition: 0.4s;
@@ -501,6 +601,9 @@ body {
     }
     .yt .yt-list .video {
         width: 100%;
+    }
+    .index-nature {
+        display: none;
     }
 }
 
@@ -564,6 +667,7 @@ body {
     flex-direction: column;
     /* line-height: 2; */
     /* justify-content: space-between; */
+    font-family: "Saira Extra Condensed", sans-serif;
 }
 .blog-list .blog-wrap .blog-text .date {
     font-size: 20px;
@@ -604,7 +708,14 @@ body {
     font-weight: 300;
     transition: 0.2s;
     /* background-color: aqua; */
+    font-family: "Saira Extra Condensed", sans-serif;
     }
+
+.blog-function a:hover {
+    transform: scale(1.2);
+    transition: 2s;
+    font-weight: 800;
+}
 
 .blog-space {
     width: 100%;
@@ -633,6 +744,17 @@ body {
         margin: 10px 0;
     }
 
+}
+
+.blog-wrap {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 5s ease;
+}
+
+.blog-wrap.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -698,6 +820,19 @@ body {
     width: 100%;
     /* object-fit: cover; */
 }
+
+.main-aboutus {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 5s ease;
+}
+
+.main-aboutus.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .about-button {
     margin-top: 10px;
 }
@@ -772,7 +907,8 @@ body {
 .contact-section .info-container {
     margin: auto 173px;
     display: flex;
-    padding: 70px 0;
+    /* flex-wrap: wrap; */
+    padding: 70px 50px;
     justify-content: space-between;
     align-items: center;
     /* background-color: #f00; */
@@ -782,6 +918,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    padding: 20px;
 }
 .contact-section .info-container .info .info_wrap {
     display: flex;
@@ -802,6 +939,7 @@ body {
 }
 .contact-section .info-container .location iframe {
     border: 0;
+    width: 100%;
 }
 
 .contact-form {
@@ -829,9 +967,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    /* align-items:center; */
     margin: auto;
     padding: 70px 150px;
     position: relative;
+    /* background-color: #f00; */
 }
 .form-container .form-content .form-wrap {
     display: flex;
@@ -921,6 +1061,31 @@ body {
     bottom: 66px;
     /* background-color: #f00; */
 }
+
+@media screen and (max-width:1023px) {
+    .contact-section .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;        
+    }
+    .contact-section .info-container .info {
+        padding-bottom: 30px;
+    }
+    .form-container .form-content {
+        width: 90%;
+        margin: auto;
+        padding: 70px 0%;
+    }
+    .form-container .form-content .form-wrap {
+        justify-content: space-around;
+    }
+
+}
+
+
+
+
+
 
 .section_login {
     width: 100%;
@@ -1102,7 +1267,11 @@ body {
     line-height: 1.5;
     margin-bottom: 60px;
 }
-
+.cart-content .cart-container .pic {
+    width: 50px;
+    /* background-color: #fa0; */
+    margin: auto;
+}
 
 .cart-content .cart-container .cart-button a {
     width: 150px;
@@ -1130,15 +1299,17 @@ body {
 
 .product_wrap {
     display: flex;
-    padding: 50px 50px 100px ;
+    padding: 50px 0px 100px ;
     width: 100%;
 }
 .product_pic_wrap {
     display: block;
+    padding-left: 30px;
 }
 .main_pic {
     width: 450px;
-    padding-bottom: 35px;
+    padding-bottom: 20px;
+    /* padding-left: 35px; */
 }
 .main_pic img {
     width: 100%;
@@ -1159,6 +1330,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-left: 50px;
+    /* background-color: #f00; */
 }
 .product_info_wrap .information {
     display: flex;
@@ -1197,6 +1369,15 @@ body {
 }
 .quantity-btn {
     display: flex;
+    /* background-color: aqua; */
+}
+.quantity-btn p {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 20px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
 }
 .quantity-btn .number {
     font-size: 18px;
@@ -1217,6 +1398,7 @@ body {
     line-height: 40px;
     font-size: 20px;
     border-top: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
     border-bottom: 1px solid #d6d6d6;
     text-align: center;
 }
@@ -1258,6 +1440,26 @@ body {
     background-color: #000;
 }
 
+@media screen and (max-width: 1023px) {
+    .product_pic_wrap {
+        margin: auto;        
+    }
+    .product_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 50px 0;
+    }
+    .main_pic {
+        width: 300px;
+    }
+    .product_pic_wrap {
+        padding-bottom: 30px;
+    }
+}
+
+
+
 
 
 
@@ -1268,6 +1470,7 @@ body {
     margin-top: 80px;
     width: 100%;
     background-color: #f7f7f8;
+    font-family: "Saira Extra Condensed", sans-serif;
 }
 .footer {
     display: flex;
@@ -1387,6 +1590,67 @@ body {
         /* background-color: #f00; */
     }
 }
+
+
+.back-to-top {
+    position: fixed;  
+    bottom: 20px;
+    right: 10px;
+    z-index: 99;
+    border: 3px solid #141414;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.92);
+    cursor: pointer;
+    padding: 15px;
+    /* font-weight: 600; */
+    font-family: "Saira Extra Condensed", sans-serif;
+    border-radius: 10px; 
+    width: 20px;
+    height: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    /* box-shadow: 0 2px 4px gray; */
+    color: #000000;
+    text-decoration: none;
+}
+.back-to-top:hover {
+    color: #ffffff;
+    transition: 0.5s;
+    background-color: #000000;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+.marquee {
+    display: block;
+    animation: marqueeAnimation 10s linear infinite; /* 调整时间和动画效果 */
+    font-size: 50px;
+    font-family: Silkscreen;
+    padding: 20px;
+    white-space: nowrap;
+}
+
+@keyframes marqueeAnimation {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 
 
 

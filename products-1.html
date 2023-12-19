@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;400;500&family=Open+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/surfpenguin.css">
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
     <input type="checkbox" id="menu_switch">
@@ -58,20 +59,20 @@
     <div class="product_wrap">
         <div class="product_pic_wrap">
             <div class="main_pic">
-                <img src="img/productitem1.png" alt="productitem1">
+                <img id="large" src="img/productitem1.png" alt="productitem1">
             </div>
             <div class="pic_list">
                 <div class="sub_pic">
-                    <img src="img/productitem2.png" alt="productitem2">
+                    <img src="img/productitem2.svg" alt="productitem2" class="small">
                 </div>
                 <div class="sub_pic">
-                    <img src="img/productitem3.png" alt="productitem3">
+                    <img src="img/productitem3.svg" alt="productitem3" class="small">
                 </div>
                 <div class="sub_pic">
-                    <img src="img/productitem4.png" alt="productitem4">
+                    <img src="img/productitem4.svg" alt="productitem4" class="small">
                 </div>
                 <div class="sub_pic">
-                    <img src="img/productitem5.png" alt="productitem5">
+                    <img src="img/productitem5.svg" alt="productitem5" class="small">
                 </div>
             </div>
         </div>
@@ -89,9 +90,10 @@
             <div class="quantity_select">
                 <div class="quantity-btn">
                     <!-- <div class="number">數量</div> -->
-                    <div class="minus">-</div>
-                    <div class="number">1</div>
-                    <div class="plus">+</div>
+                    <input type="button" class="minus" value="-" id="btnMinus0">
+                    <input type="text" class="number" size="4" value="0" id="qty0">
+                    <input type="button" class="plus" value="+" id="btnPlus0">
+                    <p id="totalDisplay">總計：0元</p>
                 </div>
             </div>
             <div class="buy_button">                
@@ -160,5 +162,8 @@
             
         </div>
     </div>
+    <script src="JS/my$$.js"></script>
+    <script src="JS/btn.js"></script>
+    <script src="JS/showLargeImage.js"></script>
 </body>
 </html>
